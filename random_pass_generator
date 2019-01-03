@@ -1,0 +1,4 @@
+#! /bin/bash
+login_password="$(< /dev/urandom tr -dc A-Z | head -c3)""$(< /dev/urandom tr -dc a-z | head -c5)""$(< /dev/urandom tr -dc 0-9 | head -c2)""$(< /dev/urandom tr -cd [:punct:] | head -c1)"
+
+printf $login_password
